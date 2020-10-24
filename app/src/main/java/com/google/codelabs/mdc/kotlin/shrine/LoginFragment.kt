@@ -18,6 +18,7 @@ class LoginFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.shr_login_fragment, container, false)
+        (activity as NavigationHost).navigateTo(ProductGridFragment(), false)
         // Snippet from "Navigate to the next Fragment" section goes here.
         view.next_button.setOnClickListener {
             if (!isPasswordValid(password_edit_text.text!!)) {
